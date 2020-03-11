@@ -193,10 +193,8 @@ public class MainActivity extends AppCompatActivity {
                         message = string;
                     }
                     Toast.makeText(getBaseContext(), "Map Marker picked " + message, Toast.LENGTH_LONG).show();
-                    return;
+                    get_route(lat, lon, topmostMapMarker.getCoordinates().latitude, topmostMapMarker.getCoordinates().longitude);
                 }
-
-                get_route(lat, lon, topmostMapMarker.getCoordinates().latitude, topmostMapMarker.getCoordinates().longitude);
             }
         });
     }
