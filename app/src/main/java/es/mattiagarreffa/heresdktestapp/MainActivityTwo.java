@@ -21,7 +21,6 @@ import com.here.sdk.core.GeoCircle;
 import com.here.sdk.core.GeoCoordinates;
 import com.here.sdk.core.GeoPolyline;
 import com.here.sdk.core.LanguageCode;
-import com.here.sdk.core.Metadata;
 import com.here.sdk.core.TextFormat;
 import com.here.sdk.core.errors.InstantiationErrorException;
 import com.here.sdk.mapviewlite.MapImage;
@@ -95,8 +94,8 @@ public class MainActivityTwo extends AppCompatActivity {
                     mapView.getCamera().setTarget(new GeoCoordinates(52.530858, 13.384744));
                     mapView.getCamera().setZoomLevel(14);
 
-                    addMapMarkers(new GeoCoordinates(52.530858, 13.384744), R.drawable.poimine, null);
-                    addMapMarkers(new GeoCoordinates(52.65465, 12.58196), R.drawable.poitest, null);
+                    addMapMarkers(new GeoCoordinates(52.530858, 13.384744), R.drawable.poimine);
+                    addMapMarkers(new GeoCoordinates(52.65465, 12.58196), R.drawable.poitest);
 
                     get_route();
 
@@ -109,7 +108,7 @@ public class MainActivityTwo extends AppCompatActivity {
         });
     }
 
-    private void addMapMarkers(GeoCoordinates geoCoordinates, int image, Metadata metadata) {
+    private void addMapMarkers(GeoCoordinates geoCoordinates, int image) {
         MapImage mapImage = MapImageFactory.fromResource(MainActivityTwo.this.getResources(), image);
         MapMarker mapMarker = new MapMarker(geoCoordinates);
 
@@ -117,7 +116,6 @@ public class MainActivityTwo extends AppCompatActivity {
         mapMarkerImageStyle.setAnchorPoint(new Anchor2D(0.5F, 1));
 
         mapMarker.addImage(mapImage, mapMarkerImageStyle);
-        mapMarker.setMetadata(metadata);
         mapView.getMapScene().addMapMarker(mapMarker);
     }
 
