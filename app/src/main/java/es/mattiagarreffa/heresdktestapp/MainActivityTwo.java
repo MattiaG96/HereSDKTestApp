@@ -47,13 +47,13 @@ import java.util.Objects;
 
 public class MainActivityTwo extends AppCompatActivity {
 
-    SearchEngine searchEngine;
-    RoutingEngine routingEngine;
-    MapPolyline previousPolyline = null;
-    int length;
-    List<String> restaurants = new ArrayList<>();
-    Button searchButton;
-    private MapViewLite mapView;
+    SearchEngine searchEngine; // Global SearchEngine
+    RoutingEngine routingEngine; // Global RoutingEngine
+    MapPolyline previousPolyline = null; // Global Polyline
+    int length; // Global route length.
+    List<String> restaurants = new ArrayList<>(); // Global restaurants array.
+    Button searchButton; // Global search button
+    private MapViewLite mapView; // Global mapView.
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
