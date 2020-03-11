@@ -1,0 +1,2 @@
+rootProject.name='HereSDKTestApp'
+include ':app'
