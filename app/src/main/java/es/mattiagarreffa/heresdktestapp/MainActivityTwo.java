@@ -197,7 +197,7 @@ public class MainActivityTwo extends AppCompatActivity {
                 // Add new marker for each search result on map.
                 for (SearchResult searchResult : list) {
 
-                    restaurants.add(searchResult.title);
+                    restaurants.add(searchResult.title + " - " + searchResult.category.localizedName);
                 }
 
                 System.out.println(">>>>>>>>>>>>>>>> " + restaurants);
