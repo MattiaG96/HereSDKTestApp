@@ -19,7 +19,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name=".MainActivityTwo"
+            android:name=".MainActivityThree"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
 
@@ -33,6 +33,11 @@
 
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".MainActivityTwo"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
 
